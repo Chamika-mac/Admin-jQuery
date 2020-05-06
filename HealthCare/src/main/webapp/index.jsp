@@ -13,43 +13,33 @@
 
 <body style="background-color: #F0FFF0">
 
-	<!--  
-	<div style='padding: 10px'>
-		<table id="admin-table" class="table">
-			<thead>
-				<tr>
-
-					<th>Admin ID</th>
-					<th>Admin Role</th>
-					<th>Admin Username</th>
-
-				</tr>
-			</thead>
-
-			<tbody>
-				<tr>
-					<td>chamika</td>
-					<td>admin</td>
-					<td>chamikamac</td>
-				</tr>
-
-			</tbody>
-		</table>
-
-	</div>
-	-->
-
 
 	<div style='padding: 3% 30%'>
 		<button type="submit" class="btn btn-warning" id="printButton" onclick="adminVisible()">Admin Registration</button>
 		<button type="submit" class="btn btn-warning" onclick="pharmacyVisible()">Pharmacy Registration</button>
-
-
-
+		<button type="submit" class="btn btn-danger" onclick="allAdminVisible()">View All Admins</button>
+		<button type="submit" class="btn btn-danger" onclick="getAllPharmacy()">View All Pharmacy</button>
+	</div>
+	
+	<div id="allAdmin" style="display: none">
+	
+		<div style='padding: 3% 30%'  onload="getAllPharmacy()">
+		<h3>View All Admins</h3>
+		
+		<table border ="1">
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		
+		</div>
+		
 	</div>
 
 
-	<div id="myDIV" style="background-color: #F0FFF0">
+	<div id="myDIV">
 
 		<div style='padding: 3% 30%'>
 			<form onsubmit="createAdmin()">
@@ -114,7 +104,7 @@
 					</div>
 				</div>
 
-				<button type="submit" class="btn btn-primary" id="button">Register</button>
+				<button type="submit" class="btn btn-primary" id="adminButton">Register</button>
 			</form>
 
 
