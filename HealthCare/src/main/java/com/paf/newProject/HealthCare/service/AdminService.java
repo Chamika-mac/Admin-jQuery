@@ -60,11 +60,11 @@ public class AdminService {
 			pst.execute();
 			con.close();
 
-			output = "Inserted successfully";
+			output = "{\"status\":\"success\", \"data\": \"Error while inserting the item.\"}";
 		}
 
 		catch (Exception e) {
-			output = "Error while inserting the item.";
+			output =  "{\"status\":\"error\", \"data\": \"Error while inserting the item.\"}";
 			System.err.println(e.getMessage());
 		}
 
